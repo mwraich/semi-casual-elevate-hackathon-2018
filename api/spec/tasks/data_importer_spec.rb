@@ -1,7 +1,7 @@
 require 'rails_helper'
 require 'rake'
 
-RSpec.describe DataImporter do
+RSpec.describe 'Rake::Task[import:programs]' do
   before do
     Rails.application.load_tasks
   end
@@ -16,9 +16,20 @@ RSpec.describe DataImporter do
       import(csv)
     end.to change { Program.count }.by(1)
 
-    expect(Program.find(5)).to have_attributes(
-      code: 'some code'
-    )
+    expect(Program.find(5)).to have_attributes(code: 'some code')
+  end
+
+  it 'deletes the previous data' do
+    Program.create!
+
+    csv = <<~CSV
+      code
+      some code
+    CSV
+
+    import(csv)
+
+    expect(Program.count).to eq(1)
   end
 
   private
