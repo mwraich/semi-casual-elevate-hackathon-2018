@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
 
 bin/setup
+rm tmp/pids/server.pid
 bin/rails server
