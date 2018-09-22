@@ -1,0 +1,83 @@
+class InitialDb < ActiveRecord::Migration[5.2]
+  def change
+    create_table :programs do |t|
+      t.timestamps
+
+      t.string :address
+      t.string :age_group_1
+      t.string :age_group_2
+      t.string :age_group_3
+      t.string :age_groups
+      t.string :branch_name
+      t.string :code
+      t.string :date
+      t.string :date_1
+      t.string :date_2
+      t.string :description
+      t.string :end_date
+      t.string :end_date1
+      t.string :end_time
+      t.string :event_type_1
+      t.string :event_type_2
+      t.string :event_type_3
+      t.string :event_types
+      t.string :extra_tag
+      t.string :friday
+      t.string :friday_hours
+      t.string :fsa_x
+      t.string :fsa_y
+      t.string :gid
+      t.string :id_2
+      t.string :id_x
+      t.string :id_y
+      t.string :image_height
+      t.string :image_path
+      t.string :image_text
+      t.string :image_width
+      t.string :kid_stop_address
+      t.string :kid_stop_ward_number
+      t.string :length
+      t.string :link
+      t.string :link
+      t.string :link_address
+      t.string :link_text
+      t.string :location
+      t.string :monday
+      t.string :monday_hours
+      t.string :nbhd_name_x
+      t.string :nbhd_name_y
+      t.string :nbhd_number_x
+      t.string :nbhd_number_y
+      t.string :other_info
+      t.string :postal_code
+      t.string :primary_event_type
+      t.string :rcid
+      t.string :reading_address
+      t.string :reading_postal_code
+      t.string :reading_ward_number
+      t.string :record_type
+      t.string :saturday
+      t.string :saturday_hours
+      t.string :status
+      t.string :sunday
+      t.string :sunday_hours
+      t.string :thursday
+      t.string :thursday_hours
+      t.string :tier
+      t.string :tier_x
+      t.string :tier_y
+      t.string :time
+      t.string :title
+      t.string :tuesday
+      t.string :tuesday_hours
+      t.string :updated_at
+      t.string :ward_region_x
+      t.string :ward_region_y
+      t.string :wednesday
+      t.string :wednesday_hours
+      t.string :weekly_scheduled_hours
+      t.string :x_coordinates
+      t.string :y_coordinates
+    end
+  end
+end
