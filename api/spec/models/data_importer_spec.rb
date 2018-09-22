@@ -11,9 +11,7 @@ RSpec.describe DataImporter do
       import(csv)
     end.to change { Program.count }.by(1)
 
-    expect(Program.find(5)).to have_attributes(
-      code: 'some code'
-    )
+    expect(Program.find(5)).to have_attributes(code: 'some code')
   end
 
   private
