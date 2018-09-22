@@ -1,0 +1,12 @@
+.home-page {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding-top: 4em;
+}
+
+.card-container-h {
+    text-align: center;
+    width: 18rem;
+    margin: 1.6%;
+}

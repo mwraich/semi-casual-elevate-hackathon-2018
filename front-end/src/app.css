@@ -1,0 +1,14 @@
+.story {
+    position: relative;
+    transition: left 1.5s;
+    overflow: visible;
+    display: flex;
+}
+
+.page {
+    width: 1000px;
+    height: 700px;
+    background: white;
+    margin-top: 50px;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);}
+
