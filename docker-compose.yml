@@ -12,6 +12,7 @@ services:
       - "8000:8000"
     volumes:
       - ./api:/app
+      - ./json_data:/data
     depends_on:
       - database
     environment:
