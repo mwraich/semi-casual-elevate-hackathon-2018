@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-docker-compose run web bin/rake import:programs[../data/complete_data_set.csv]
+docker-compose run web bin/rake import:programs[../data/events.json]
