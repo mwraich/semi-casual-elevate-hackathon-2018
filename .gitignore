@@ -27,3 +27,4 @@ yarn-error.log*
 /api/log/*
 !/api/log/.keep
 /api/tmp
+/config/*.yml
