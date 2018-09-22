@@ -7,5 +7,6 @@ ADD api/Gemfile.lock /app/Gemfile.lock
 RUN bundle install
 
 VOLUME "/app"
+VOLUME "/data"
 
 CMD ["bin/startup"]

@@ -20,7 +20,7 @@ default: &default
   # For details on connection pooling, see rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: 5
-  host: <%= ENV["DB_HOST"] || "database" %>
+  host: <%= ENV["DB_HOST"] || "localhost" %>
   database: <%= ENV["DB_NAME"] || "semi-casual" %>
   username: <%= ENV["DB_USER"] || "semi-casual" %>
   password: <%= ENV["DB_PASSWORD"] || "secure-password" %>
