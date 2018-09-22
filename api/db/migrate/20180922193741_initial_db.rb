@@ -10,8 +10,8 @@ class InitialDb < ActiveRecord::Migration[5.2]
       t.string :age_groups
       t.string :branch_name
       t.string :code
-      t.string :date
-      t.string :date_1
+      t.datetime :date
+      t.datetime :date_1
       t.string :date_2
       t.string :description
       t.string :end_date
@@ -23,7 +23,7 @@ class InitialDb < ActiveRecord::Migration[5.2]
       t.string :event_types
       t.string :extra_tag
       t.string :friday
-      t.string :friday_hours
+      t.integer :friday_hours
       t.string :fsa_x
       t.string :fsa_y
       t.string :gid
@@ -43,41 +43,41 @@ class InitialDb < ActiveRecord::Migration[5.2]
       t.string :link_text
       t.string :location
       t.string :monday
-      t.string :monday_hours
+      t.integer :monday_hours
       t.string :nbhd_name_x
       t.string :nbhd_name_y
-      t.string :nbhd_number_x
-      t.string :nbhd_number_y
+      t.integer :nbhd_number_x
+      t.integer :nbhd_number_y
       t.string :other_info
       t.string :postal_code
       t.string :primary_event_type
-      t.string :rcid
+      t.integer :rcid
       t.string :reading_address
       t.string :reading_postal_code
-      t.string :reading_ward_number
-      t.string :record_type
+      t.integer :reading_ward_number
+      t.integer :record_type
       t.string :saturday
-      t.string :saturday_hours
+      t.integer :saturday_hours
       t.string :status
       t.string :sunday
-      t.string :sunday_hours
+      t.integer :sunday_hours
       t.string :thursday
-      t.string :thursday_hours
+      t.integer :thursday_hours
       t.string :tier
       t.string :tier_x
       t.string :tier_y
       t.string :time
       t.string :title
       t.string :tuesday
-      t.string :tuesday_hours
+      t.integer :tuesday_hours
       t.string :updated_at
       t.string :ward_region_x
       t.string :ward_region_y
       t.string :wednesday
-      t.string :wednesday_hours
-      t.string :weekly_scheduled_hours
-      t.string :x_coordinates
-      t.string :y_coordinates
+      t.integer :wednesday_hours
+      t.integer :weekly_scheduled_hours
+      t.decimal :latitude
+      t.decimal :longitude
     end
   end
 end
