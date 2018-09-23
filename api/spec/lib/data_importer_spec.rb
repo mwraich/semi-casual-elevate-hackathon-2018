@@ -6,11 +6,9 @@ RSpec.describe DataImporter do
       program = sample_program_hash(
         title: 'some title',
         age_groups: 'Adult, Older Adult, Teen',
-        age_group_1: 'Adult',
-        age_group_2: 'Older Adult',
-        age_group_3: 'Teen',
         primary_event_type: '01-Library Settlement Partnerships',
         branch_name: 'Agincourt',
+        link: 'http://www.torontopubliclibrary.ca/detail.jsp?Em=1&Entt=RDMEVT319514&R=EVT319514'
       )
       file_path = write_programs_to_file(program)
 
@@ -23,6 +21,7 @@ RSpec.describe DataImporter do
         age_groups: 'Adult, Older Adult, Teen',
         primary_event_type: '01-Library Settlement Partnerships',
         branch_name: 'Agincourt',
+        link: 'http://www.torontopubliclibrary.ca/detail.jsp?Em=1&Entt=RDMEVT319514&R=EVT319514',
         master_category: 'culture'
       )
     end

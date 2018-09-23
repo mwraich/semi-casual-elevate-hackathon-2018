@@ -8,7 +8,8 @@ module DataImporter
     'description' => 'description',
     'agegroups' => 'age_groups',
     'prieventtype' => 'primary_event_type',
-    'library' => 'branch_name'
+    'library' => 'branch_name',
+    'link' => 'link'
   }.freeze
 
   CATEGORY_TYPE = {

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_23_022956) do
+ActiveRecord::Schema.define(version: 2018_09_23_133158) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(version: 2018_09_23_022956) do
     t.string "primary_event_type"
     t.string "title"
     t.string "master_category"
+    t.string "link"
     t.index ["title"], name: "index_programs_on_title", unique: true
   end
 
