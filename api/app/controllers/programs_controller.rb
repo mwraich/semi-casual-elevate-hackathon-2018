@@ -14,8 +14,8 @@ class ProgramsController < ApplicationController
   def find_programs
     scope = Program.default_scoped
 
-    scope = scope.search(params[:q]) if params[:q]
-    scope = scope.search_location(params[:location]) if params[:location]
+    scope = scope.search(params[:q]) if params[:q].present?
+    scope = scope.search_location(params[:location]) if params[:location].present?
 
     scope
   end
