@@ -10,7 +10,7 @@ To run the app, you will need to git clone the app.
 `git clone git@github.com:mwraich/semi-casual-elevate-hackathon-2018.git`
 
 Rails is used in the backend so you'll need to cd into the api directory, install the corresponding gems, `bundle install`, create your db. `rails db:create` and 
-then run migrations `rake db:migrate`.  
+then run migrations `rails db:migrate`.  
 
 We use docker for containerization so you'll need to build your docker image. 
 
