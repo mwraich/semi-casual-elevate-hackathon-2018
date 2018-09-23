@@ -13,9 +13,6 @@ RSpec.describe DataImporter do
       expect(Program.last).to have_attributes(
         title: 'some title',
         age_groups: 'Adult, Older Adult, Teen',
-        age_group_1: 'Adult',
-        age_group_2: 'Older Adult',
-        age_group_3: 'Teen',
         primary_event_type: '01-Library Settlement Partnerships',
         branch_name: 'Agincourt',
         master_category: 'culture'
