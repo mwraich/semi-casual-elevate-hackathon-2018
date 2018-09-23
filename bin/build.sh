@@ -5,6 +5,7 @@ set -euo pipefail
 echo
 echo "******* Building Docker Images *******"
 echo
+docker-compose pull
 docker-compose build
 
 echo
