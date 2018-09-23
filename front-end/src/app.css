@@ -3,6 +3,8 @@
     transition: left 1.5s;
     overflow: visible;
     display: flex;
+    flex-wrap: nowrap;
+    text-align: center;
 }
 
 .page {

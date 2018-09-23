@@ -19,20 +19,25 @@ class PageRouter extends Component {
     const data = await fetch(`http://localhost:3030/programs?q=${query}&location=${location}`, { mode: 'cors'})
       .then(data => data.json())
     console.log(data)
-
     this.setState({
       page: "ResultsPage",
       data
     })
   }
 
+  showStory = () => this.setState({page: "Story"})
+
   render() {
     switch (this.state.page) {
       case "HomePage":
-        return <HomePage submitSearch={this.submitSearch} />
+        return <HomePage submitSearch={this.submitSearch} showStory={this.showStory} />
 
       case "ResultsPage":
         return <ResultsPage data={this.state.data} />
+      case "Story":
+        return <StorySlider />
+      default:
+        break;
     }
   }
 }
@@ -43,7 +48,6 @@ class App extends Component {
       <div >
         <NavBar />
         <PageRouter />
-        {/* <StorySlider /> */}
       </div>
     )
   }

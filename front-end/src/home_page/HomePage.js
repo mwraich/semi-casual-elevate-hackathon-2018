@@ -23,7 +23,7 @@ export default class HomePage extends Component {
         this.setState({ location: data })
     }
 
-    handleSubmit = async () => {
+    handleSubmit = () => {
         const { query, location } = this.state
         this.props.submitSearch({query, location})
     }
@@ -57,7 +57,7 @@ export default class HomePage extends Component {
                         </div>
                     </div>
                 </div>
-                <div className="card-container-h">
+                <div className="card-container-h" onClick={this.props.showStory} >
                     <h5>Help me find programs</h5>
                     <div className="card" style={{width: '18rem'}}>
                         <img className="card-img-top" src={`${dadPic.url}`} alt={dadPic.title}/>
