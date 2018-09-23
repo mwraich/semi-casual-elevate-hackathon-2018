@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import dad from './dad.jpg'
 import './home_page.css';
 import search from './search.svg'
+import AutoSuggestionSearch from './AutoSuggestionSearch.js'
 
 
 const dadPic = {
@@ -17,6 +18,10 @@ export default class HomePage extends Component {
 
     handleChange = (event) => {
     this.setState({ [event.target.name]: event.target.value });
+    }
+
+    handleLocationChange = data => {
+        this.setState({ location: data })
     }
 
     handleSubmit = () => {
@@ -41,7 +46,7 @@ export default class HomePage extends Component {
                             ></input>
                             <br />
                             <h6 className="text-left margin16">Which locations(s)?</h6>
-                            <input
+                            {/* <input
                                 name="location"
                                 style={{
                                     borderStyle: 'none none solid none'
@@ -49,8 +54,8 @@ export default class HomePage extends Component {
                                 className="input margin16" 
                                 placeholder="Parkdale"
                                 onChange={this.handleChange}
-                            ></input>
-                            <br />
+                            ></input> */}
+                            <AutoSuggestionSearch handleLocationChange={this.handleLocationChange} />
                             <br />
                             <div style={{textAlign: 'center'}} >
                                 <button 

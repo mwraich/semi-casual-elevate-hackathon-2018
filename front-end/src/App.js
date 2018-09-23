@@ -15,8 +15,8 @@ class App extends Component {
     return (
       <div >
         <NavBar />
-        {/* <HomePage /> */}
-        <StorySlider />
+        <HomePage />
+        {/* <StorySlider /> */}
       </div>
     )
   }

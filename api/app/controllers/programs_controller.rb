@@ -12,10 +12,11 @@ class ProgramsController < ApplicationController
   private
 
   def find_programs
-    if params[:q]
-      Program.search(params[:q])
-    else
-      Program.all
-    end
+    scope = Program.default_scoped
+
+    scope = scope.search(params[:q]) if params[:q]
+    scope = scope.search_location(params[:location]) if params[:location]
+
+    scope
   end
 end
