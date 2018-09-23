@@ -8,7 +8,8 @@ module DataImporter
     'agegroups' => 'age_groups',
     'agegroup1' => 'age_group_1',
     'agegroup2' => 'age_group_2',
-    'agegroup3' => 'age_group_3'
+    'agegroup3' => 'age_group_3',
+    'prieventtype' => 'primary_event_type'
   }.freeze
 
   def self.programs(json_file)

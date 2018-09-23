@@ -3,13 +3,7 @@ require 'rails_helper'
 RSpec.describe DataImporter do
   context 'importing events' do
     it 'from JSON' do
-      program = sample_program.merge(
-        title: 'some title',
-        age_groups: 'Adult, Older Adult, Teen',
-        age_group_1: 'Adult',
-        age_group_2: 'Older Adult',
-        age_group_3: 'Teen'
-      )
+      program = sample_program
       file_path = write_programs_to_file(program)
 
       expect do
@@ -21,7 +15,8 @@ RSpec.describe DataImporter do
         age_groups: 'Adult, Older Adult, Teen',
         age_group_1: 'Adult',
         age_group_2: 'Older Adult',
-        age_group_3: 'Teen'
+        age_group_3: 'Teen',
+        primary_event_type: '01-Library Settlement Partnerships'
       )
     end
 
