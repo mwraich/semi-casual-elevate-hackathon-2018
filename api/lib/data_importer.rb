@@ -5,6 +5,7 @@ module DataImporter
 
   LOOKUP = {
     'title' => 'title',
+    'description' => 'description',
     'agegroups' => 'age_groups',
     'agegroup1' => 'age_group_1',
     'agegroup2' => 'age_group_2',
