@@ -173,8 +173,8 @@ const Card = ({ title, image }) => {
 
 const Card2 = ({ title, image }) => {
     return (
-        <div className="card" style={{width: '14rem',  height: '14rem', margin: '1em 0em'}}>
-            <img className="card-img-top" src={`${image.url}`} height="" width="" style={{padding: '0em 0em'}} alt={image.title}/>
+        <div className="card" style={{width: '18rem', margin: '1em 0em', borderTopLeftRadius: '1em', borderTopRightRadius: '1em'}}>
+            <img className="card-img-top" src={`${image.url}`} height="" width="" style={{padding: '0em 0em', borderTopLeftRadius: '1em', borderTopRightRadius: '1em'}} alt={image.title}/>
             <div className="card-body">
             <h5 className="card-title text-center">{title}</h5>
             </div>
