@@ -17,7 +17,8 @@ RSpec.describe DataImporter do
         age_group_2: 'Older Adult',
         age_group_3: 'Teen',
         primary_event_type: '01-Library Settlement Partnerships',
-        branch_name: 'Agincourt'
+        branch_name: 'Agincourt',
+        master_category: 'culture'
       )
     end
 

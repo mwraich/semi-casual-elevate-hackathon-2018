@@ -74,7 +74,7 @@ module DataImporter
       whitelisted_json = values
         .transform_keys { |key, _value| LOOKUP[key] }
         .slice(*whitelisted_attributes)
-
+      whitelisted_json.merge!(master_category: find_master_category(whitelisted_json['primary_event_type']))
       Program.create!(whitelisted_json)
     end
   end
@@ -88,5 +88,10 @@ module DataImporter
 
   def self.whitelisted_attributes
     LOOKUP.values
+  end
+
+  def self.find_master_category(primary_event_type)
+    return unless primary_event_type.present?
+    CATEGORY_TYPE[primary_event_type]
   end
 end
