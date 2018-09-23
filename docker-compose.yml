@@ -8,7 +8,7 @@ services:
       context: .
       dockerfile: docker/Dockerfile-rails
     ports:
-      - "3000:3000"
+      - "3030:3000"
       - "8000:8000"
     volumes:
       - ./api:/app
