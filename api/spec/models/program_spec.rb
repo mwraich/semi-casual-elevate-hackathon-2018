@@ -1,9 +1,9 @@
-# require 'rails_helper'
+require 'rails_helper'
 
 RSpec.describe Program do
   context 'tags' do
     it 'can have tags added to it' do
-      program = Program.create
+      program = Program.create!
       program.tag_list.add('Family')
       program.save!
 

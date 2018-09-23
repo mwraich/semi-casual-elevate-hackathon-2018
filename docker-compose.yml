@@ -9,7 +9,6 @@ services:
       dockerfile: docker/Dockerfile-rails
     ports:
       - "3030:3000"
-      - "8000:8000"
     volumes:
       - ./api:/app
       - ./data:/data

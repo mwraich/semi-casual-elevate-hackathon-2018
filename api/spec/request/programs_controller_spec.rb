@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe EventsController, type: :request do
+RSpec.describe ProgramsController, type: :request do
   it 'returns all events' do
     Program.create!(title: 'some event')
 
@@ -28,6 +28,16 @@ RSpec.describe EventsController, type: :request do
 
       expect(records.map(&:description)).to include('find me')
       expect(records.map(&:description)).to_not include('something else')
+    end
+
+    it 'filters by location' do
+      Program.create!(branch_name: 'find me')
+      Program.create!(branch_name: 'something else')
+
+      get '/events?location=find+me'
+
+      expect(records.map(&:branch_name)).to include('find me')
+      expect(records.map(&:branch_name)).to_not include('something else')
     end
   end
 
