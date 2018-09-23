@@ -2,4 +2,4 @@
 
 bin/setup
 rm tmp/pids/server.pid
-bin/rails server
+bin/rails server --port 3030
