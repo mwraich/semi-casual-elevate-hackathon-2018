@@ -1,4 +1,4 @@
-class EventsController < ApplicationController
+class ProgramsController < ApplicationController
   def index
     render json: find_programs.as_json(
       only: [

@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe EventsController, type: :request do
+RSpec.describe ProgramsController, type: :request do
   it 'returns all events' do
     Program.create!(title: 'some event')
 
