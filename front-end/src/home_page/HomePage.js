@@ -24,9 +24,12 @@ export default class HomePage extends Component {
         this.setState({ location: data })
     }
 
-    handleSubmit = () => {
+    handleSubmit = async () => {
         const { program, location } = this.state
         console.log(program, location)
+        const data = await fetch(`http://localhost:3030/programs?q=${program}&location=${location}`, { mode: 'cors'})
+            .then(data => data.json())
+        console.log(data)
     }
 
     render() {
