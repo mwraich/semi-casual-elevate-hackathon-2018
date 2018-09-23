@@ -4,7 +4,6 @@ import './home_page.css';
 import search from './search.svg'
 import AutoSuggestionSearch from './AutoSuggestionSearch.js'
 
-
 const dadPic = {
     title: 'Picture of dad and son reading a book',
     url: dad,
@@ -12,12 +11,12 @@ const dadPic = {
 
 export default class HomePage extends Component {
     state = {
-        program: '',
+        query: '',
         location: '',
     }
 
     handleChange = (event) => {
-    this.setState({ [event.target.name]: event.target.value });
+        this.setState({ [event.target.name]: event.target.value });
     }
 
     handleLocationChange = data => {
@@ -25,15 +24,12 @@ export default class HomePage extends Component {
     }
 
     handleSubmit = async () => {
-        const { program, location } = this.state
-        console.log(program, location)
-        const data = await fetch(`http://localhost:3030/programs?q=${program}&location=${location}`, { mode: 'cors'})
-            .then(data => data.json())
-        console.log(data)
+        const { query, location } = this.state
+        this.props.submitSearch({query, location})
     }
 
     render() {
-        return(
+        return (
             <div className="home-page">
                 <div className="card-container-h">
                     <h5>I know what I'm looking for</h5>
@@ -41,29 +37,20 @@ export default class HomePage extends Component {
                         <img className="card-img-top" src={`${search}`} height="142" style={{padding: '2em'}} alt={dadPic.title}/>
                         <div className="card-body" style={{textAlign: 'left'}} >
                             <h6 className="text-left margin16">Program Search</h6>
-                            <input 
-                                name="program"
-                                className="input margin16" 
+                            <input
+                                name="query"
+                                className="input margin16"
                                 placeholder="Find a program"
                                 onChange={this.handleChange}
                             ></input>
                             <br />
                             <h6 className="text-left margin16">Which locations(s)?</h6>
-                            {/* <input
-                                name="location"
-                                style={{
-                                    borderStyle: 'none none solid none'
-                                }} 
-                                className="input margin16" 
-                                placeholder="Parkdale"
-                                onChange={this.handleChange}
-                            ></input> */}
                             <AutoSuggestionSearch handleLocationChange={this.handleLocationChange} />
                             <br />
                             <div style={{textAlign: 'center'}} >
-                                <button 
-                                    type="button" 
-                                    className="btn btn-primary" 
+                                <button
+                                    type="button"
+                                    className="btn btn-primary"
                                     onClick={this.handleSubmit}
                                     >Search</button>
                             </div>

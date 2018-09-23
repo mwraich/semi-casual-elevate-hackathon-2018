@@ -1,0 +1,22 @@
+.home-page {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding-top: 4em;
+}
+
+.card-container-h {
+    text-align: center;
+    width: 18rem;
+    margin: 1.6%;
+    min-height: 500px;
+}
+
+.margin16{
+    margin: 1.6%;
+    width: 100%;
+}
+
+#react-autowhatever-1 {
+    text-decoration: none;
+}
