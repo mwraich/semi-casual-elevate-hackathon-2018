@@ -4,7 +4,8 @@ class ProgramsController < ApplicationController
       only: [
         :title,
         :description,
-        :branch_name
+        :branch_name,
+        :link
       ]
     )
   end

@@ -8,7 +8,7 @@ const ResultsPage = ({ data = [] }) => {
       <ul>
         {
           data.map((result) => (
-            <li key={ result.title }>{ result.title }</li>
+            <li key={ result.title }><a href={result.link}>{result.title}</a></li>
           ))
         }
       </ul>
