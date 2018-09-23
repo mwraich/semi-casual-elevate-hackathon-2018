@@ -68,7 +68,7 @@ module DataImporter
       '01-Appel Salon Programming' => 'life skills',
       '01-Entrepreneur in Residence' => 'life skills',
       '01-Fabrication Studio' => 'life skills'
-  }
+  }.freeze
 
   def self.programs(json_file)
     read_and_parse(json_file).each do |values|
