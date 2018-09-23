@@ -9,7 +9,8 @@ module DataImporter
     'agegroup1' => 'age_group_1',
     'agegroup2' => 'age_group_2',
     'agegroup3' => 'age_group_3',
-    'prieventtype' => 'primary_event_type'
+    'prieventtype' => 'primary_event_type',
+    'library' => 'branch_name'
   }.freeze
 
   def self.programs(json_file)
@@ -20,7 +21,6 @@ module DataImporter
 
       Program.create!(whitelisted_json)
     end
-
   end
 
   private
